@@ -3,6 +3,8 @@ pwd = input ("What is the master password? ")
 def view ():
     pass
 
+
+
 def add ():
     pass
     
@@ -12,9 +14,9 @@ def add ():
             break
 
         if mode == "view" :
-            pass
+            view()
         elif mode == "add":
-            pass
+            add()
         else:
             print("Invalid mode.")
             continue
