@@ -6,7 +6,10 @@ def view ():
 def add ():
     name = input ('Account Name: ')
     password = input ('Password: ')
-    
+
+    with open('password.txt', 'a') as f: 
+        f.write(name + "|" + pwd)
+
     while True:
         mode = input (" Whould you like to add a new password or view existing ones (view, add)? If you want to quit press q.").lower()
         if mode == "q":
