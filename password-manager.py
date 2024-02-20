@@ -2,6 +2,9 @@ from cryptography.fernet import Fernet
 
 master_pwd = input ("What is the master password? ")
 
+def write_key():
+    key = Fernet.generate_key()
+
 def view ():
     with open('password.txt', 'R') as f: 
       for line in f.readlines():
