@@ -2,12 +2,15 @@ from cryptography.fernet import Fernet
 
 master_pwd = input ("What is the master password? ")
 
+'''
 def write_key():
     key = Fernet.generate_key()
     with open("key.key", "wb") as key_file:
-        key_file.write(key)
+        key_file.write(key)'''
 
-write_key()
+def load_key():
+    return open ("key.key", "rb").read()
+
 
 def view ():
     with open('password.txt', 'R') as f: 
