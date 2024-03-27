@@ -28,7 +28,7 @@ def add ():
     password = input ('Password: ')
 
     with open('password.txt', 'a') as f: 
-        f.write(name + "|" + password + "\n")
+        f.write(name + "|" + fer.encrypt(password.encode()) + "\n")
 
 
 while True:
