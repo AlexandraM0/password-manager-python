@@ -12,9 +12,9 @@ def load_key():
     file.close()
     return key
 
-key = load_key()
-
 master_pwd = input ("What is the master password? ")
+key = load_key() + master_pwd.bytes
+fer = Fernet(key)
 
 def view ():
     with open('password.txt', 'R') as f: 
