@@ -7,7 +7,7 @@ def write_key():
         key_file.write(key)'''
 
 def load_key():
-    file = open ("key.key", "rb")
+    file = open("key.key", "rb")
     key = file.read()
     file.close()
     return key
@@ -21,14 +21,14 @@ def view ():
       for line in f.readlines():
           data = (line.rstrip())
           user, passw = data.split("|")
-          print("User:", user, " | Password:", str(fer.decrypt(passw.encode())))
+          print("User:", user, " | Password:", fer.decrypt(passw.encode()))
 
 def add ():
     name = input ('Account Name: ')
     password = input ('Password: ')
 
     with open('password.txt', 'a') as f: 
-        f.write(name + "|" + str(fer.encrypt(password.encode())) + "\n")
+        f.write(name + "|" + fer.encrypt(password.encode()).decode() + "\n")
 
 
 while True:
